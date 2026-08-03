@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patitas al Sol | Veterinaria en Punta del Este — Turnos y tienda para mascotas</title>
+<meta name="description" content="Veterinaria en Punta del Este con atención cálida y profesional para perros y gatos. Consultas, internación y tienda con productos naturales. 5★ en Google (77 reseñas). Pedí tu turno por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#FAF5EC;
+  --crema-2:#F3EAD9;
+  --verde:#1E4B40;
+  --verde-osc:#153830;
+  --sol:#E8A33D;
+  --sol-suave:#F6D9A8;
+  --terracota:#C96F4A;
+  --tinta:#26231D;
+  --tinta-suave:#5C564B;
+  --blanco:#FFFFFF;
+  --radio:18px;
+  --sombra:0 10px 30px rgba(30,75,64,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  font-family:'Nunito Sans',system-ui,sans-serif;
+  font-size:17px;line-height:1.65;color:var(--tinta);
+  background:var(--crema);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.15;color:var(--verde);font-weight:600}
+h1{font-size:clamp(2.1rem,6vw,3.4rem)}
+h2{font-size:clamp(1.7rem,4.5vw,2.4rem)}
+h3{font-size:1.2rem}
+p{color:var(--tinta-suave)}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.kicker{
+  display:inline-block;font-size:.8rem;font-weight:800;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--terracota);margin-bottom:12px;
+}
+.sec-head{max-width:620px;margin-bottom:44px}
+.sec-head p{margin-top:14px}
+
+/* ---------- botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:14px 28px;border-radius:999px;
+  font-family:'Nunito Sans',sans-serif;font-size:1rem;font-weight:800;
+  text-decoration:none;cursor:pointer;border:2px solid transparent;
+  transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s;
+}
+.btn svg{flex:none}
+.btn-primario{background:var(--verde);color:#FDFBF6}
+.btn-primario:hover{background:var(--verde-osc);box-shadow:0 6px 18px rgba(30,75,64,.28)}
+.btn-secundario{background:transparent;color:var(--verde);border-color:var(--verde)}
+.btn-secundario:hover{background:rgba(30,75,64,.08)}
+.btn-wsp{background:#1FA855;color:#fff}
+.btn-wsp:hover{background:#17824206;background:#178242;box-shadow:0 6px 18px rgba(31,168,85,.3)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--sol);outline-offset:3px;border-radius:6px}
+.btn:focus-visible{border-radius:999px}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,245,236,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(30,75,64,.12);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icono{
+  width:40px;height:40px;border-radius:50%;background:var(--sol);
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.logo-texto{font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--verde);line-height:1.1}
+.logo-texto small{display:block;font-family:'Nunito Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terracota)}
+.nav-links{display:none;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;font-weight:700;font-size:.95rem;color:var(--tinta);transition:color .2s}
+.nav-links a:hover{color:var(--terracota)}
+.nav-cta{display:none}
+.menu-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:48px;height:48px;border:none;background:none;cursor:pointer;color:var(--verde);
+}
+.menu-movil{display:none;border-top:1px solid rgba(30,75,64,.12);padding:10px 0 18px}
+.menu-movil.abierto{display:block}
+.menu-movil a{
+  display:block;padding:12px 4px;text-decoration:none;font-weight:700;color:var(--tinta);
+}
+.menu-movil a:hover{color:var(--terracota)}
+.menu-movil .btn{width:100%;margin-top:10px}
+@media(min-width:860px){
+  .nav-links{display:flex}
+  .nav-cta{display:inline-flex;min-height:44px;padding:10px 22px;font-size:.92rem}
+  .menu-btn{display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 72px;background:linear-gradient(180deg,var(--crema) 0%,var(--crema-2) 100%)}
+.hero-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.hero .kicker{color:var(--verde);background:var(--sol-suave);padding:6px 14px;border-radius:999px}
+.hero h1{margin:16px 0 18px}
+.hero-sub{font-size:1.12rem;max-width:520px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0 26px}
+.hero-datos{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.92rem;font-weight:700;color:var(--tinta-suave)}
+.hero-datos span{display:inline-flex;align-items:center;gap:8px}
+.hero-datos svg{color:var(--terracota);flex:none}
+.rating{
+  display:inline-flex;align-items:center;gap:10px;background:var(--blanco);
+  border:1px solid rgba(30,75,64,.14);border-radius:14px;padding:10px 16px;
+  box-shadow:var(--sombra);margin-bottom:20px;
+}
+.estrellas{color:var(--sol);letter-spacing:2px;font-size:1.05rem}
+.rating b{color:var(--tinta)}
+.rating small{color:var(--tinta-suave);font-weight:700}
+.hero-visual{position:relative}
+.hero-foto{
+  aspect-ratio:4/4.4;border-radius:28px;overflow:hidden;position:relative;
+  background:
+    radial-gradient(circle at 78% 18%,var(--sol-suave) 0,transparent 42%),
+    radial-gradient(circle at 15% 85%,rgba(201,111,74,.25) 0,transparent 45%),
+    linear-gradient(160deg,#DCE8DD 0%,#B9CFBE 60%,#9DBBA6 100%);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--sombra);
+}
+.placeholder-tag{
+  position:absolute;bottom:14px;left:14px;right:14px;
+  background:rgba(255,255,255,.9);border-radius:12px;padding:9px 14px;
+  font-size:.8rem;font-weight:700;color:var(--tinta-suave);text-align:center;
+}
+.hero-badge{
+  position:absolute;top:18px;right:2px;background:var(--blanco);border-radius:16px;
+  padding:12px 18px;box-shadow:var(--sombra);display:flex;align-items:center;gap:10px;
+  font-size:.85rem;font-weight:800;color:var(--verde);
+}
+.hero-badge svg{color:var(--sol)}
+@media(max-width:520px){.hero-badge{position:static;margin-top:14px;justify-content:center}}
+
+/* ---------- barra de confianza ---------- */
+.confianza{background:var(--verde);color:#EFE9DC;padding:26px 0}
+.confianza-grid{display:grid;gap:18px;text-align:center}
+@media(min-width:760px){.confianza-grid{grid-template-columns:repeat(3,1fr)}}
+.confianza b{display:block;font-family:'Fraunces',serif;font-size:1.35rem;color:#fff}
+.confianza span{font-size:.9rem;opacity:.85}
+
+/* ---------- servicios ---------- */
+.tarjetas{display:grid;gap:22px}
+@media(min-width:680px){.tarjetas{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.tarjetas.cuatro{grid-template-columns:repeat(4,1fr)}}
+.tarjeta{
+  background:var(--blanco);border-radius:var(--radio);padding:28px 24px;
+  border:1px solid rgba(30,75,64,.10);box-shadow:var(--sombra);
+  transition:box-shadow .2s,border-color .2s;
+}
+.tarjeta:hover{border-color:rgba(30,75,64,.28);box-shadow:0 14px 34px rgba(30,75,64,.16)}
+.tarjeta-icono{
+  width:52px;height:52px;border-radius:14px;background:var(--sol-suave);
+  display:flex;align-items:center;justify-content:center;color:var(--verde);margin-bottom:18px;
+}
+.tarjeta h3{margin-bottom:10px}
+.tarjeta p{font-size:.95rem}
+.nota-editable{
+  margin-top:26px;font-size:.85rem;color:var(--tinta-suave);
+  background:var(--crema-2);border-left:4px solid var(--sol);
+  padding:12px 16px;border-radius:0 10px 10px 0;
+}
+
+/* ---------- profesional ---------- */
+.profesional{background:var(--crema-2)}
+.prof-grid{display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.prof-grid{grid-template-columns:.85fr 1.15fr}}
+.prof-foto{
+  aspect-ratio:1/1.1;border-radius:24px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 25% 20%,var(--sol-suave) 0,transparent 45%),
+    linear-gradient(150deg,#E4D9C4 0%,#CBBFa5 50%,#B3A88E 100%);
+  box-shadow:var(--sombra);
+}
+.prof-texto blockquote{
+  font-family:'Fraunces',serif;font-size:1.15rem;color:var(--verde);
+  border-left:4px solid var(--sol);padding-left:18px;margin:22px 0;
+}
+.prof-texto cite{display:block;font-family:'Nunito Sans',sans-serif;font-size:.85rem;font-style:normal;font-weight:700;color:var(--tinta-suave);margin-top:8px}
+
+/* ---------- metodología ---------- */
+.pasos{display:grid;gap:26px;counter-reset:paso}
+@media(min-width:860px){.pasos{grid-template-columns:repeat(3,1fr)}}
+.paso{position:relative;background:var(--blanco);border-radius:var(--radio);padding:30px 24px 26px;border:1px solid rgba(30,75,64,.10);box-shadow:var(--sombra)}
+.paso-num{
+  width:44px;height:44px;border-radius:50%;background:var(--verde);color:#FDFBF6;
+  font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+}
+.paso h3{margin-bottom:8px}
+.paso p{font-size:.95rem}
+
+/* ---------- reseñas ---------- */
+.resenas{background:var(--verde)}
+.resenas .kicker{color:var(--sol)}
+.resenas h2{color:#FDFBF6}
+.resenas .sec-head p{color:rgba(253,251,246,.75)}
+.resena-grid{display:grid;gap:22px}
+@media(min-width:860px){.resena-grid{grid-template-columns:repeat(3,1fr)}}
+.resena{
+  background:rgba(253,251,246,.06);border:1px solid rgba(253,251,246,.16);
+  border-radius:var(--radio);padding:26px 24px;display:flex;flex-direction:column;gap:14px;
+}
+.resena .estrellas{font-size:.95rem}
+.resena p{color:rgba(253,251,246,.88);font-size:.95rem;flex:1}
+.resena footer{font-size:.85rem;font-weight:800;color:var(--sol)}
+.resena footer span{display:block;font-weight:600;color:rgba(253,251,246,.6)}
+.resenas-cta{text-align:center;margin-top:36px}
+.resenas-cta a{color:var(--sol-suave);font-weight:700}
+
+/* ---------- faq ---------- */
+.faq-lista{max-width:760px}
+details{
+  background:var(--blanco);border:1px solid rgba(30,75,64,.12);border-radius:14px;
+  margin-bottom:14px;overflow:hidden;
+}
+summary{
+  list-style:none;cursor:pointer;padding:18px 22px;font-weight:800;color:var(--verde);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:52px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";font-family:'Fraunces',serif;font-size:1.5rem;color:var(--terracota);
+  flex:none;line-height:1;transition:transform .2s;
+}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 22px 20px;font-size:.96rem}
+
+/* ---------- ubicación ---------- */
+.ubicacion{background:var(--crema-2)}
+.ubi-grid{display:grid;gap:30px}
+@media(min-width:900px){.ubi-grid{grid-template-columns:1fr 1fr}}
+.ubi-card{background:var(--blanco);border-radius:var(--radio);padding:30px 26px;border:1px solid rgba(30,75,64,.10);box-shadow:var(--sombra)}
+.ubi-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(30,75,64,.08);align-items:flex-start}
+.ubi-item:last-of-type{border-bottom:none}
+.ubi-item svg{color:var(--terracota);flex:none;margin-top:3px}
+.ubi-item a{font-weight:700;color:var(--verde)}
+.ubi-item a:hover{color:var(--terracota)}
+.horarios{width:100%;border-collapse:collapse;font-size:.95rem}
+.horarios td{padding:9px 0;border-bottom:1px solid rgba(30,75,64,.08);color:var(--tinta-suave)}
+.horarios td:last-child{text-align:right;font-weight:700;color:var(--tinta)}
+.horarios tr.hoy td{color:var(--verde);font-weight:800}
+.mapa-ph{
+  border-radius:var(--radio);min-height:280px;height:100%;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 70% 30%,rgba(232,163,61,.28) 0,transparent 40%),
+    linear-gradient(140deg,#D8E2D2 0%,#BCCDBB 100%);
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--sombra);
+}
+
+/* ---------- turnos ---------- */
+.turnos-caja{
+  background:var(--blanco);border-radius:24px;padding:36px 26px;
+  border:1px solid rgba(30,75,64,.10);box-shadow:var(--sombra);max-width:720px;margin:0 auto;
+}
+@media(min-width:700px){.turnos-caja{padding:44px 48px}}
+.campo{margin-bottom:18px}
+.campo label{display:block;font-weight:800;font-size:.9rem;margin-bottom:7px;color:var(--verde)}
+.campo input,.campo select,.campo textarea{
+  width:100%;min-height:50px;padding:12px 16px;font:inherit;font-size:1rem;
+  border:2px solid rgba(30,75,64,.18);border-radius:12px;background:var(--crema);
+  color:var(--tinta);transition:border-color .2s;
+}
+.campo textarea{min-height:96px;resize:vertical}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--sol)}
+.turnos-caja .btn{width:100%}
+.turnos-nota{font-size:.85rem;text-align:center;margin-top:14px}
+
+/* ---------- footer ---------- */
+footer.pie{background:var(--verde-osc);color:rgba(253,251,246,.75);padding:52px 0 32px;font-size:.92rem}
+.pie-grid{display:grid;gap:32px;margin-bottom:36px}
+@media(min-width:760px){.pie-grid{grid-template-columns:1.2fr 1fr 1fr}}
+.pie h3{color:#FDFBF6;font-size:1.05rem;margin-bottom:14px}
+.pie ul{list-style:none}
+.pie li{margin-bottom:9px}
+.pie a{color:rgba(253,251,246,.75);text-decoration:none;transition:color .2s}
+.pie a:hover{color:var(--sol)}
+.pie-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.pie-logo .logo-icono{background:var(--sol)}
+.pie-logo span{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700;color:#FDFBF6}
+.pie-legal{
+  border-top:1px solid rgba(253,251,246,.15);padding-top:22px;text-align:center;
+  font-size:.82rem;color:rgba(253,251,246,.55);
+}
+.pie-legal strong{color:rgba(253,251,246,.8)}
+
+/* ---------- flotante ---------- */
+.wsp-flotante{
+  position:fixed;bottom:20px;right:20px;z-index:60;
+  width:58px;height:58px;border-radius:50%;background:#1FA855;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  box-shadow:0 8px 24px rgba(0,0,0,.28);transition:background-color .2s,box-shadow .2s;
+}
+.wsp-flotante:hover{background:#178242;box-shadow:0 10px 28px rgba(0,0,0,.35)}
+</style>
+</head>
+<body>
+
+<!-- ======================= HEADER ======================= -->
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="Patitas al Sol — inicio">
+      <span class="logo-icono" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#1E4B40" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.5c-2.4 0-5.5 2.2-5.5 4.6 0 1.4 1 2.4 2.5 2.4 1.1 0 1.9-.5 3-.5s1.9.5 3 .5c1.5 0 2.5-1 2.5-2.4 0-2.4-3.1-4.6-5.5-4.6Zm-5.8-2.1c1.1-.3 1.7-1.7 1.3-3.1-.4-1.4-1.6-2.3-2.7-2S3.1 8 3.5 9.4c.4 1.4 1.6 2.3 2.7 2Zm4-1.7c1.2 0 2.1-1.2 2.1-2.7S11.4 4.3 10.2 4.3 8.1 5.5 8.1 7s.9 2.7 2.1 2.7Zm5.4.3c1.2 0 2.1-1.2 2.1-2.7s-.9-2.7-2.1-2.7-2.1 1.2-2.1 2.7.9 2.7 2.1 2.7Zm4.9 1.4c-.4-1.3-1.6-2.2-2.7-1.9s-1.7 1.7-1.3 3c.4 1.4 1.6 2.3 2.7 2 1.1-.3 1.7-1.7 1.3-3.1Z" transform="translate(0 -1.2)"/></svg>
+      </span>
+      <span class="logo-texto">Patitas al Sol<small>Veterinaria · Punta del Este</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#equipo">Quién atiende</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+    <a href="#turnos" class="btn btn-primario nav-cta">Solicitar turno</a>
+    <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav class="wrap menu-movil" id="menuMovil" aria-label="Menú móvil">
+    <a href="#servicios" onclick="cerrarMenu()">Servicios</a>
+    <a href="#equipo" onclick="cerrarMenu()">Quién atiende</a>
+    <a href="#resenas" onclick="cerrarMenu()">Reseñas</a>
+    <a href="#faq" onclick="cerrarMenu()">Preguntas frecuentes</a>
+    <a href="#ubicacion" onclick="cerrarMenu()">Ubicación y horarios</a>
+    <a href="#turnos" class="btn btn-primario" onclick="cerrarMenu()">Solicitar turno</a>
+  </nav>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Perros y gatos · Punta del Este</span>
+      <h1>Una veterinaria donde tu mascota se siente cómoda</h1>
+      <p class="hero-sub">Atención cálida y profesional en Avenida Pedragosa Sierra, con consultas sin apuro, instalaciones pensadas para las mascotas y una tienda con productos y snacks para acompañar su alimentación.</p>
+      <div class="hero-ctas">
+        <a href="#turnos" class="btn btn-primario">Solicitar turno</a>
+        <a href="https://wa.me/59898462862?text=Hola%20Patitas%20al%20Sol%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" class="btn btn-secundario">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2.05 22l5.3-1.38a9.87 9.87 0 0 0 4.69 1.19h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.83 14.12c-.25.7-1.45 1.33-2 1.38-.51.05-1.15.24-3.88-.81-3.27-1.29-5.38-4.62-5.55-4.83-.16-.22-1.33-1.77-1.33-3.38 0-1.61.84-2.4 1.14-2.73.3-.33.66-.41.88-.41l.63.01c.2.01.47-.08.74.56.27.66.92 2.26 1 2.42.08.16.14.36.03.58-.11.22-.17.36-.33.55-.16.19-.35.43-.5.58-.16.16-.34.34-.15.67.19.33.86 1.42 1.85 2.3 1.27 1.13 2.34 1.48 2.67 1.65.33.16.53.14.72-.08.19-.22.83-.97 1.05-1.3.22-.33.44-.28.74-.17.3.11 1.91.9 2.24 1.07.33.16.55.24.63.38.08.14.08.79-.17 1.56Z"/></svg>
+          Consultar por WhatsApp
+        </a>
+      </div>
+      <div class="rating">
+        <span class="estrellas" aria-hidden="true">★★★★★</span>
+        <span><b>5,0</b> <small>· 77 reseñas en Google</small></span>
+      </div>
+      <div class="hero-datos">
+        <span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Av. Pedragosa Sierra, Punta del Este
+        </span>
+        <span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Lun a vie 9:00–18:00 · Sáb 10:00–14:00
+        </span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-foto">
+        <svg width="90" height="90" viewBox="0 0 24 24" fill="rgba(30,75,64,.35)" aria-hidden="true"><path d="M12 13.5c-2.4 0-5.5 2.2-5.5 4.6 0 1.4 1 2.4 2.5 2.4 1.1 0 1.9-.5 3-.5s1.9.5 3 .5c1.5 0 2.5-1 2.5-2.4 0-2.4-3.1-4.6-5.5-4.6Zm-5.8-2.1c1.1-.3 1.7-1.7 1.3-3.1-.4-1.4-1.6-2.3-2.7-2S3.1 8 3.5 9.4c.4 1.4 1.6 2.3 2.7 2Zm4-1.7c1.2 0 2.1-1.2 2.1-2.7S11.4 4.3 10.2 4.3 8.1 5.5 8.1 7s.9 2.7 2.1 2.7Zm5.4.3c1.2 0 2.1-1.2 2.1-2.7s-.9-2.7-2.1-2.7-2.1 1.2-2.1 2.7.9 2.7 2.1 2.7Zm4.9 1.4c-.4-1.3-1.6-2.2-2.7-1.9s-1.7 1.7-1.3 3c.4 1.4 1.6 2.3 2.7 2 1.1-.3 1.7-1.7 1.3-3.1Z"/></svg>
+        <span class="placeholder-tag">[ Foto del local o de la Dra. Sol con un paciente — reemplazar ]</span>
+      </div>
+      <div class="hero-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 9.1 8.6 2 9.3l5.4 4.8L5.8 21 12 17.3 18.2 21l-1.6-6.9L22 9.3l-7.1-.7L12 2Z"/></svg>
+        5★ en Google · 77 opiniones
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BARRA DE CONFIANZA ======================= -->
+<div class="confianza">
+  <div class="wrap confianza-grid">
+    <div><b>5,0 de 5</b><span>calificación en Google, sobre 77 reseñas</span></div>
+    <div><b>Perros y gatos</b><span>consultas, seguimiento y tienda en un mismo lugar</span></div>
+    <div><b>Respuesta por WhatsApp</b><span>consultas y turnos por mensaje, sin vueltas</span></div>
+  </div>
+</div>
+
+<!-- ======================= SERVICIOS ======================= -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Servicios</span>
+      <h2>Todo lo que tu mascota necesita, en un solo lugar</h2>
+      <p>Quienes visitan Patitas al Sol destacan lo completo del lugar: atención veterinaria dedicada, instalaciones cómodas y una tienda bien surtida.</p>
+    </div>
+    <div class="tarjetas cuatro">
+      <div class="tarjeta">
+        <div class="tarjeta-icono">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 3v5a5 5 0 0 0 10 0V3"/><path d="M4.8 3h2M12.8 3h2"/><path d="M9.8 13v3a5 5 0 0 0 10 0v-1"/><circle cx="19.8" cy="12" r="2.4"/></svg>
+        </div>
+        <h3>Consulta clínica</h3>
+        <p>Revisión general con explicaciones claras y el tiempo necesario para que tu mascota esté tranquila durante la atención.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-icono">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M12 8v3M10.5 9.5h3"/></svg>
+        </div>
+        <h3>Internación</h3>
+        <p>Instalaciones cómodas y equipamiento moderno para los casos que requieren cuidados con seguimiento cercano.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-icono">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1.5 12.5a2 2 0 0 1-2 1.5h-5a2 2 0 0 1-2-1.5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        </div>
+        <h3>Tienda para mascotas</h3>
+        <p>Variedad de productos, accesorios de buena calidad y snacks, con opciones para quienes eligen la alimentación natural.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-icono">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.7-.8L3 20l1-5.5a8.2 8.2 0 0 1-.9-3.8A8.4 8.4 0 0 1 11.6 2.4a8.4 8.4 0 0 1 9.4 9.1Z"/></svg>
+        </div>
+        <h3>Seguimiento por WhatsApp</h3>
+        <p>Ante una duda después de la consulta, podés escribir por WhatsApp y recibir una respuesta rápida.</p>
+      </div>
+    </div>
+    <p class="nota-editable">[ Sección editable: acá se pueden sumar otros servicios que ofrezca la veterinaria — vacunación, cirugías, análisis clínicos, peluquería, etc. — con la confirmación del negocio. ]</p>
+  </div>
+</section>
+
+<!-- ======================= PROFESIONAL ======================= -->
+<section class="profesional" id="equipo">
+  <div class="wrap prof-grid">
+    <div class="prof-foto">
+      <span class="placeholder-tag">[ Foto profesional de la Dra. Sol — reemplazar ]</span>
+    </div>
+    <div class="prof-texto">
+      <span class="kicker">Quién atiende</span>
+      <h2>Sol, la veterinaria que los clientes eligen y recomiendan</h2>
+      <p style="margin-top:14px">Las reseñas coinciden en lo mismo: dedicación, claridad para explicar y un trato que hace que las mascotas se sientan cómodas. Muchos clientes la eligen desde hace años y la siguen recomendando.</p>
+      <blockquote>
+        “Sol es una excelente profesional, hace años la elegimos y recomendamos por su dedicación y trato con los animales.”
+        <cite>— Victoria Macchi, reseña de Google</cite>
+      </blockquote>
+      <p style="font-size:.85rem">[ Espacio editable para completar con formación, matrícula y años de ejercicio de la profesional. ]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= METODOLOGÍA ======================= -->
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Cómo funciona</span>
+      <h2>Pedir un turno lleva menos de un minuto</h2>
+    </div>
+    <div class="pasos">
+      <div class="paso">
+        <div class="paso-num" aria-hidden="true">1</div>
+        <h3>Escribinos</h3>
+        <p>Mandá un WhatsApp o completá el formulario con los datos de tu mascota y el motivo de la consulta.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-num" aria-hidden="true">2</div>
+        <h3>Coordinamos el turno</h3>
+        <p>Te respondemos para confirmar día y horario, dentro del horario de atención de lunes a sábado.</p>
+      </div>
+      <div class="paso">
+        <div class="paso-num" aria-hidden="true">3</div>
+        <h3>Visitá el local</h3>
+        <p>Atención sin apuro en un espacio pensado para que perros y gatos estén cómodos. Y si necesitás algo más, la tienda está en el mismo lugar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= RESEÑAS ======================= -->
+<section class="resenas" id="resenas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Reseñas reales</span>
+      <h2>Lo que dicen quienes ya nos visitaron</h2>
+      <p>Opiniones publicadas en Google por clientes de Patitas al Sol. Calificación general: 5,0 sobre 5, con 77 reseñas.</p>
+    </div>
+    <div class="resena-grid">
+      <article class="resena">
+        <span class="estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
+        <p>“La atención es profesional y cálida desde el primer momento. La veterinaria es muy dedicada, clara en sus explicaciones y se tomó el tiempo para que nuestra perra esté cómoda. Además, el lugar cuenta con una gran variedad de productos para las mascotas.”</p>
+        <footer>Kris Johann <span>Reseña de Google · hace 6 meses</span></footer>
+      </article>
+      <article class="resena">
+        <span class="estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
+        <p>“Sol atiende a mis dos peludos, Eva y Poroto. Es una excelente veterinaria, sin duda la seguiría eligiendo. Hermoso local, con variedad de productos y con muy buena tecnología para internaciones.”</p>
+        <footer>Pamela Schipilov <span>Reseña de Google · hace 6 meses</span></footer>
+      </article>
+      <article class="resena">
+        <span class="estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
+        <p>“Sol es muy atenta, una gran profesional y la atención en el local es impecable, tienen de todo. Además, si tenés alguna consulta te responde al toque por WhatsApp. Súper recomendable.”</p>
+        <footer>Paula Finozzi <span>Reseña de Google · hace 5 meses</span></footer>
+      </article>
+    </div>
+    <p class="resenas-cta">
+      <a href="https://maps.google.com/?cid=4732017044798115688" target="_blank" rel="noopener">Ver todas las reseñas en Google Maps →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2>Dudas comunes antes de la primera visita</h2>
+    </div>
+    <div class="faq-lista">
+      <details>
+        <summary>¿Atienden perros y gatos?</summary>
+        <p>Sí. Los clientes destacan tanto la atención a perros como la variedad de artículos y accesorios de calidad para gatos disponibles en la tienda.</p>
+      </details>
+      <details>
+        <summary>¿Cómo pido un turno?</summary>
+        <p>Podés escribir por WhatsApp al +598 98 462 862 o completar el formulario de esta página. Te respondemos para coordinar día y horario.</p>
+      </details>
+      <details>
+        <summary>¿Qué días abren?</summary>
+        <p>De lunes a viernes de 9:00 a 18:00 y sábados de 10:00 a 14:00. Los domingos el local permanece cerrado.</p>
+      </details>
+      <details>
+        <summary>¿Tienen productos de alimentación natural?</summary>
+        <p>Sí. La tienda cuenta con variedad de productos y snacks, incluyendo opciones para quienes eligen la alimentación natural para sus mascotas.</p>
+      </details>
+      <details>
+        <summary>¿Hacen internaciones?</summary>
+        <p>El local cuenta con instalaciones cómodas y tecnología para internaciones. Para conocer el detalle de cada caso, lo mejor es hacer la consulta directamente por WhatsApp.</p>
+      </details>
+      <details>
+        <summary>[ Pregunta editable ]</summary>
+        <p>[ Espacio para sumar preguntas frecuentes reales del negocio: medios de pago, urgencias, cirugías, vacunación, etc. ]</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= UBICACIÓN ======================= -->
+<section class="ubicacion" id="ubicacion">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Ubicación y horarios</span>
+      <h2>Estamos en Avenida Pedragosa Sierra</h2>
+    </div>
+    <div class="ubi-grid">
+      <div class="ubi-card">
+        <div class="ubi-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <a href="https://maps.google.com/?cid=4732017044798115688" target="_blank" rel="noopener">Avenida Orlando Pedragosa Sierra esquina, Punta del Este</a>
+            <p style="font-size:.85rem">Departamento de Maldonado, Uruguay · <a href="https://maps.google.com/?cid=4732017044798115688" target="_blank" rel="noopener" style="font-size:.85rem">Cómo llegar</a></p>
+          </div>
+        </div>
+        <div class="ubi-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><a href="tel:+59898462862">+598 98 462 862</a><p style="font-size:.85rem">Llamada o WhatsApp</p></div>
+        </div>
+        <div class="ubi-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <div><a href="https://www.instagram.com/vet_patitasalsol" target="_blank" rel="noopener">@vet_patitasalsol</a><p style="font-size:.85rem">Seguinos en Instagram</p></div>
+        </div>
+        <table class="horarios" aria-label="Horarios de atención">
+          <tr><td>Lunes a viernes</td><td>9:00 – 18:00</td></tr>
+          <tr><td>Sábado</td><td>10:00 – 14:00</td></tr>
+          <tr><td>Domingo</td><td>Cerrado</td></tr>
+        </table>
+      </div>
+      <a class="mapa-ph" href="https://maps.google.com/?cid=4732017044798115688" target="_blank" rel="noopener" aria-label="Abrir ubicación de Patitas al Sol en Google Maps">
+        <span class="placeholder-tag">[ Mapa — el enlace abre la ficha real de Google Maps ]</span>
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(30,75,64,.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TURNOS ======================= -->
+<section id="turnos">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="kicker">Turnos</span>
+      <h2>Solicitá un turno para tu mascota</h2>
+      <p>Completá el formulario y el mensaje se abre directamente en WhatsApp, listo para enviar. Sin registros ni esperas.</p>
+    </div>
+    <form class="turnos-caja" onsubmit="enviarWsp(event)">
+      <div class="campo">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Ej.: María">
+      </div>
+      <div class="campo">
+        <label for="mascota">Nombre y tipo de mascota</label>
+        <input type="text" id="mascota" name="mascota" required placeholder="Ej.: Poroto, perro">
+      </div>
+      <div class="campo">
+        <label for="motivo">Motivo de la consulta</label>
+        <textarea id="motivo" name="motivo" placeholder="Contanos brevemente qué necesita tu mascota"></textarea>
+      </div>
+      <button type="submit" class="btn btn-wsp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2.05 22l5.3-1.38a9.87 9.87 0 0 0 4.69 1.19h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.83 14.12c-.25.7-1.45 1.33-2 1.38-.51.05-1.15.24-3.88-.81-3.27-1.29-5.38-4.62-5.55-4.83-.16-.22-1.33-1.77-1.33-3.38 0-1.61.84-2.4 1.14-2.73.3-.33.66-.41.88-.41l.63.01c.2.01.47-.08.74.56.27.66.92 2.26 1 2.42.08.16.14.36.03.58-.11.22-.17.36-.33.55-.16.19-.35.43-.5.58-.16.16-.34.34-.15.67.19.33.86 1.42 1.85 2.3 1.27 1.13 2.34 1.48 2.67 1.65.33.16.53.14.72-.08.19-.22.83-.97 1.05-1.3.22-.33.44-.28.74-.17.3.11 1.91.9 2.24 1.07.33.16.55.24.63.38.08.14.08.79-.17 1.56Z"/></svg>
+        Solicitar turno por WhatsApp
+      </button>
+      <p class="turnos-nota">También podés llamar al <a href="tel:+59898462862" style="font-weight:800;color:var(--verde)">+598 98 462 862</a> en horario de atención.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="pie">
+  <div class="wrap">
+    <div class="pie-grid">
+      <div>
+        <div class="pie-logo">
+          <span class="logo-icono" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#153830"><path d="M12 13.5c-2.4 0-5.5 2.2-5.5 4.6 0 1.4 1 2.4 2.5 2.4 1.1 0 1.9-.5 3-.5s1.9.5 3 .5c1.5 0 2.5-1 2.5-2.4 0-2.4-3.1-4.6-5.5-4.6Zm-5.8-2.1c1.1-.3 1.7-1.7 1.3-3.1-.4-1.4-1.6-2.3-2.7-2S3.1 8 3.5 9.4c.4 1.4 1.6 2.3 2.7 2Zm4-1.7c1.2 0 2.1-1.2 2.1-2.7S11.4 4.3 10.2 4.3 8.1 5.5 8.1 7s.9 2.7 2.1 2.7Zm5.4.3c1.2 0 2.1-1.2 2.1-2.7s-.9-2.7-2.1-2.7-2.1 1.2-2.1 2.7.9 2.7 2.1 2.7Zm4.9 1.4c-.4-1.3-1.6-2.2-2.7-1.9s-1.7 1.7-1.3 3c.4 1.4 1.6 2.3 2.7 2 1.1-.3 1.7-1.7 1.3-3.1Z" transform="translate(0 -1.2)"/></svg>
+          </span>
+          <span>Patitas al Sol</span>
+        </div>
+        <p style="color:rgba(253,251,246,.65)">Veterinaria y tienda para mascotas en Punta del Este. Atención cálida para perros y gatos, con turnos por WhatsApp.</p>
+      </div>
+      <div>
+        <h3>Secciones</h3>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#equipo">Quién atiende</a></li>
+          <li><a href="#resenas">Reseñas</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#turnos">Solicitar turno</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="tel:+59898462862">+598 98 462 862</a></li>
+          <li><a href="https://wa.me/59898462862" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/vet_patitasalsol" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://maps.google.com/?cid=4732017044798115688" target="_blank" rel="noopener">Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie-legal">
+      <p><strong>Propuesta conceptual desarrollada por GM Studio.</strong></p>
+      <p>Sitio de demostración no oficial, creado a partir de información pública de Google Maps (agosto 2026). Los contenidos marcados entre corchetes son editables y requieren confirmación del negocio.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wsp-flotante" href="https://wa.me/59898462862?text=Hola%20Patitas%20al%20Sol%2C%20quiero%20pedir%20un%20turno" target="_blank" rel="noopener" aria-label="Escribir a Patitas al Sol por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2.05 22l5.3-1.38a9.87 9.87 0 0 0 4.69 1.19h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.83 14.12c-.25.7-1.45 1.33-2 1.38-.51.05-1.15.24-3.88-.81-3.27-1.29-5.38-4.62-5.55-4.83-.16-.22-1.33-1.77-1.33-3.38 0-1.61.84-2.4 1.14-2.73.3-.33.66-.41.88-.41l.63.01c.2.01.47-.08.74.56.27.66.92 2.26 1 2.42.08.16.14.36.03.58-.11.22-.17.36-.33.55-.16.19-.35.43-.5.58-.16.16-.34.34-.15.67.19.33.86 1.42 1.85 2.3 1.27 1.13 2.34 1.48 2.67 1.65.33.16.53.14.72-.08.19-.22.83-.97 1.05-1.3.22-.33.44-.28.74-.17.3.11 1.91.9 2.24 1.07.33.16.55.24.63.38.08.14.08.79-.17 1.56Z"/></svg>
+</a>
+
+<script>
+function toggleMenu(btn){
+  const menu = document.getElementById('menuMovil');
+  const abierto = menu.classList.toggle('abierto');
+  btn.setAttribute('aria-expanded', abierto);
+  btn.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+}
+function cerrarMenu(){
+  document.getElementById('menuMovil').classList.remove('abierto');
+  const btn = document.querySelector('.menu-btn');
+  btn.setAttribute('aria-expanded','false');
+  btn.setAttribute('aria-label','Abrir menú');
+}
+function enviarWsp(e){
+  e.preventDefault();
+  const nombre = document.getElementById('nombre').value.trim();
+  const mascota = document.getElementById('mascota').value.trim();
+  const motivo = document.getElementById('motivo').value.trim();
+  let msj = 'Hola Patitas al Sol, quiero pedir un turno.\n';
+  msj += 'Mi nombre: ' + nombre + '\n';
+  msj += 'Mascota: ' + mascota;
+  if(motivo){ msj += '\nMotivo: ' + motivo; }
+  window.open('https://wa.me/59898462862?text=' + encodeURIComponent(msj), '_blank', 'noopener');
+}
+</script>
+</body>
+</html>
