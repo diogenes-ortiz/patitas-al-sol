@@ -259,13 +259,11 @@ details p{padding:0 22px 20px;font-size:.96rem}
 .horarios td{padding:9px 0;border-bottom:1px solid rgba(30,75,64,.08);color:var(--tinta-suave)}
 .horarios td:last-child{text-align:right;font-weight:700;color:var(--tinta)}
 .horarios tr.hoy td{color:var(--verde);font-weight:800}
-.mapa-ph{
-  border-radius:var(--radio);min-height:280px;height:100%;position:relative;overflow:hidden;
-  background:
-    radial-gradient(circle at 70% 30%,rgba(232,163,61,.28) 0,transparent 40%),
-    linear-gradient(140deg,#D8E2D2 0%,#BCCDBB 100%);
-  display:flex;align-items:center;justify-content:center;box-shadow:var(--sombra);
+.mapa{
+  border-radius:var(--radio);min-height:320px;height:100%;overflow:hidden;
+  box-shadow:var(--sombra);background:#D8E2D2;
 }
+.mapa iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
 
 /* ---------- turnos ---------- */
 .turnos-caja{
@@ -599,10 +597,9 @@ footer.pie{background:var(--verde-osc);color:rgba(253,251,246,.75);padding:52px 
           <tr><td>Domingo</td><td>Cerrado</td></tr>
         </table>
       </div>
-      <a class="mapa-ph" href="https://maps.google.com/?cid=4732017044798115688" target="_blank" rel="noopener" aria-label="Abrir ubicación de Patitas al Sol en Google Maps">
-        <span class="placeholder-tag">[ Mapa — el enlace abre la ficha real de Google Maps ]</span>
-        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(30,75,64,.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-      </a>
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.474049545395!2d-54.9355285!3d-34.944725399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95750548a12f5677%3A0x41ab806e52490f68!2sPatitas%20al%20Sol!5e0!3m2!1sen!2suy!4v1785794370393!5m2!1sen!2suy" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Mapa de Patitas al Sol en Google Maps"></iframe>
+      </div>
     </div>
   </div>
 </section>
