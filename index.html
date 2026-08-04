@@ -97,7 +97,7 @@ header{
   display:block;padding:12px 4px;text-decoration:none;font-weight:700;color:var(--tinta);
 }
 .menu-movil a:hover{color:var(--terracota)}
-.menu-movil .btn{width:100%;margin-top:10px}
+.menu-movil .btn{display:flex;width:100%;margin-top:10px;text-align:center}
 @media(min-width:860px){
   .nav-links{display:flex}
   .nav-cta{display:inline-flex;min-height:44px;padding:10px 22px;font-size:.92rem}
@@ -192,7 +192,7 @@ header{
 
 /* ---------- metodología ---------- */
 .pasos{display:grid;gap:26px;counter-reset:paso}
-@media(min-width:860px){.pasos{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:760px){.pasos{grid-template-columns:repeat(3,1fr)}}
 .paso{position:relative;background:var(--blanco);border-radius:var(--radio);padding:30px 24px 26px;border:1px solid rgba(30,75,64,.10);box-shadow:var(--sombra)}
 .paso-num{
   width:44px;height:44px;border-radius:50%;background:var(--verde);color:#FDFBF6;
@@ -215,7 +215,7 @@ header{
 .resenas h2{color:#FDFBF6}
 .resenas .sec-head p{color:rgba(253,251,246,.75)}
 .resena-grid{display:grid;gap:22px}
-@media(min-width:860px){.resena-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:760px){.resena-grid{grid-template-columns:repeat(3,1fr)}}
 .resena{
   background:rgba(253,251,246,.06);border:1px solid rgba(253,251,246,.16);
   border-radius:var(--radio);padding:26px 24px;display:flex;flex-direction:column;gap:14px;
